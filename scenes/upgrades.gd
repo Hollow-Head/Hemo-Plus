@@ -2,7 +2,7 @@ extends Node
 
 var list = [{
 	"name": "Campanha",
-	"img": "res://assets/sprites/campanha.jpg"}
-, 	{"name": "CU",
-	"img": "res://assets/sprites/button.png"
-}]
+	"blood_price": "10",
+	"description": "\"Realizar Campanhas pela cidade.\"",
+	"img": "res://assets/sprites/button.png",
+	}]
