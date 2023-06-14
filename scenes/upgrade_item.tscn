@@ -2,42 +2,53 @@
 
 [ext_resource type="Texture2D" uid="uid://cafovsisisged" path="res://icon.svg" id="1_raii7"]
 
-[node name="BoxContainer" type="BoxContainer"]
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.17
-offset_bottom = 0.399994
-grow_horizontal = 2
-size_flags_horizontal = 6
-size_flags_vertical = 3
+[node name="VBoxContainer" type="VBoxContainer"]
+offset_right = 720.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
-size_flags_vertical = 0
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
 texture = ExtResource("1_raii7")
-stretch_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 2
-size_flags_vertical = 4
-text = "CUDADAD
-"
+theme_override_constants/margin_top = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer2/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
+size_flags_horizontal = 8
+theme_override_constants/margin_top = 50
 
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="RichTextLabel2" type="RichTextLabel" parent="HBoxContainer/MarginContainer2/VBoxContainer/MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 1
+size_flags_horizontal = 8
+size_flags_vertical = 8
 text = "Valor: "
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/MarginContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("1_raii7")
