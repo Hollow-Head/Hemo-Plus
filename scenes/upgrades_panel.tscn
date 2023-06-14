@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dfpv6xnnelgox"]
+
+[node name="UpgradesPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.011
+anchor_bottom = 1.015
+offset_right = 0.0799561
+offset_bottom = -0.200073

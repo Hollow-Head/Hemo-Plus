@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://x8ssgxtxxwl3"]
+
+[ext_resource type="Script" path="res://scenes/variables.gd" id="1_o0t50"]
+
+[node name="Variables" type="Node"]
+script = ExtResource("1_o0t50")
