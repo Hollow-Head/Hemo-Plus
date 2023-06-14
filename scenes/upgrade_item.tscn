@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ikvbvpy3syio" path="res://BloodThirst/blood.png" id="2_0a0a1"]
 
 [node name="UpgradeItem" type="VBoxContainer"]
+custom_minimum_size = Vector2(720, 180)
 offset_right = 720.0
 offset_bottom = 180.0
 size_flags_horizontal = 4
@@ -21,6 +22,7 @@ theme_override_constants/margin_bottom = 20
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 4
 alignment = 1
 
 [node name="Icon" type="TextureRect" parent="MarginContainer/HBoxContainer"]
@@ -29,28 +31,29 @@ size_flags_vertical = 4
 texture = ExtResource("1_raii7")
 stretch_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 8
 size_flags_vertical = 4
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_bottom = 10
 
-[node name="Description" type="RichTextLabel" parent="MarginContainer/HBoxContainer/MarginContainer"]
-custom_minimum_size = Vector2(360, 0)
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/CenterContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/normal_font_size = 18
-text = "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit.\""
-fit_content = true
-scroll_active = false
-autowrap_mode = 2
-tab_size = 0
-shortcut_keys_enabled = false
-deselect_on_focus_loss_enabled = false
-text_direction = 1
+
+[node name="Name" type="Label" parent="MarginContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 44
+text = "Name"
+
+[node name="Description" type="Label" parent="MarginContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+dakldasdakdlaskdçaskdkasldkalkdlakdaldkaçdklaçkddd"
+vertical_alignment = 1
 
 [node name="BuyButton" type="TextureButton" parent="MarginContainer/HBoxContainer"]
 layout_direction = 2
