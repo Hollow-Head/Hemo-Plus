@@ -1,43 +1,58 @@
 [gd_scene load_steps=5 format=3 uid="uid://2a1pfbob5ssy"]
 
-[ext_resource type="Script" path="res://scenes/main.gd" id="1_a5idu"]
-[ext_resource type="PackedScene" uid="uid://c275i7ta6vxto" path="res://scenes/button.tscn" id="1_ovs8l"]
-[ext_resource type="PackedScene" uid="uid://duapyd1y0gk6b" path="res://scenes/blood_text.tscn" id="2_42sao"]
-[ext_resource type="PackedScene" uid="uid://x8ssgxtxxwl3" path="res://scenes/variables.tscn" id="4_unri4"]
+[ext_resource type="Script" path="res://scenes/Main.gd" id="1_llyyp"]
+[ext_resource type="Texture2D" uid="uid://cafovsisisged" path="res://icon.svg" id="2_gendj"]
+[ext_resource type="Texture2D" uid="uid://blxquhdgi1yoj" path="res://BloodThirst/heart.png" id="3_oxoyk"]
+[ext_resource type="Texture2D" uid="uid://dkryu74dx1yq7" path="res://BloodThirst/pressedHeart.png" id="4_cnmha"]
 
-[node name="Main" type="Node2D"]
-position = Vector2(152, 32)
-script = ExtResource("1_a5idu")
+[node name="Main" type="VBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -540.0
+offset_right = 360.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_llyyp")
 
-[node name="Button" parent="." instance=ExtResource("1_ovs8l")]
-position = Vector2(192, 120)
-scale = Vector2(50, 50)
+[node name="Config" type="PanelContainer" parent="."]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(201, 297)
+[node name="MarginContainer" type="MarginContainer" parent="Config"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
-[node name="BloodText" parent="." instance=ExtResource("2_42sao")]
-offset_left = 144.0
-offset_top = 376.0
-offset_right = 211.062
-offset_bottom = 407.0
-scale = Vector2(1.68064, 1.68064)
-metadata/_edit_use_anchors_ = true
+[node name="ConfigButton" type="TextureButton" parent="Config/MarginContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_gendj")
 
-[node name="Variables" parent="." instance=ExtResource("4_unri4")]
+[node name="Heart" type="CenterContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="Panel" type="Panel" parent="."]
-offset_left = 432.0
-offset_top = 368.0
-offset_right = 472.0
-offset_bottom = 408.0
-scale = Vector2(2.75421, 2.81523)
+[node name="HeartButton" type="TextureButton" parent="Heart"]
+texture_filter = 1
+custom_minimum_size = Vector2(480, 480)
+layout_mode = 2
+texture_normal = ExtResource("3_oxoyk")
+texture_pressed = ExtResource("4_cnmha")
+stretch_mode = 0
 
-[node name="Panel3" type="Panel" parent="."]
-offset_left = -144.0
-offset_top = 368.0
-offset_right = -104.0
-offset_bottom = 408.0
-scale = Vector2(2.75421, 2.81523)
+[node name="Stats" type="HBoxContainer" parent="."]
+layout_mode = 2
 
-[connection signal="clicked" from="Button" to="." method="_on_clicked"]
+[node name="Store" type="HBoxContainer" parent="."]
+layout_mode = 2
