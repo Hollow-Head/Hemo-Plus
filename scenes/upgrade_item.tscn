@@ -6,14 +6,16 @@
 
 [node name="UpgradeItem" type="VBoxContainer"]
 custom_minimum_size = Vector2(720, 180)
-offset_right = 720.0
-offset_bottom = 180.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.167
+offset_bottom = -12.36
+grow_horizontal = 2
 script = ExtResource("1_d0fq3")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 10
@@ -31,29 +33,27 @@ size_flags_vertical = 4
 texture = ExtResource("1_raii7")
 stretch_mode = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
+size_flags_horizontal = 3
+theme_override_constants/separation = -10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/CenterContainer"]
+[node name="Name" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="Name" type="Label" parent="MarginContainer/HBoxContainer/CenterContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 44
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
 text = "Name"
+horizontal_alignment = 1
 
-[node name="Description" type="Label" parent="MarginContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+[node name="Description" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(360, 50)
 layout_mode = 2
-size_flags_horizontal = 4
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-dakldasdakdlaskdçaskdkasldkalkdlakdaldkaçdklaçkddd"
-vertical_alignment = 1
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 14
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed lectus a arcu posuere vulputate. Pellentesque mollis pharetra lobortis."
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="BuyButton" type="TextureButton" parent="MarginContainer/HBoxContainer"]
 layout_direction = 2
@@ -70,9 +70,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -46.0
+offset_left = -48.0
 offset_top = -50.0
-offset_right = 46.0
+offset_right = 48.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
