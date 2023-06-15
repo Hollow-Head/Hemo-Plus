@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://2a1pfbob5ssy"]
 
-[ext_resource type="Script" path="res://scenes/Main.gd" id="1_llyyp"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_mga1v"]
 [ext_resource type="Texture2D" uid="uid://cafovsisisged" path="res://icon.svg" id="2_gendj"]
 [ext_resource type="Texture2D" uid="uid://blxquhdgi1yoj" path="res://BloodThirst/heart.png" id="3_oxoyk"]
 [ext_resource type="Texture2D" uid="uid://dkryu74dx1yq7" path="res://BloodThirst/pressedHeart.png" id="4_cnmha"]
@@ -13,8 +13,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-size_flags_vertical = 6
-script = ExtResource("1_llyyp")
+size_flags_vertical = 3
+script = ExtResource("1_mga1v")
 
 [node name="Config" type="PanelContainer" parent="."]
 layout_direction = 2
