@@ -1,58 +1,114 @@
-[gd_scene load_steps=5 format=3 uid="uid://2a1pfbob5ssy"]
+[gd_scene load_steps=6 format=3 uid="uid://2a1pfbob5ssy"]
 
 [ext_resource type="Script" path="res://scenes/Main.gd" id="1_llyyp"]
 [ext_resource type="Texture2D" uid="uid://cafovsisisged" path="res://icon.svg" id="2_gendj"]
 [ext_resource type="Texture2D" uid="uid://blxquhdgi1yoj" path="res://BloodThirst/heart.png" id="3_oxoyk"]
 [ext_resource type="Texture2D" uid="uid://dkryu74dx1yq7" path="res://BloodThirst/pressedHeart.png" id="4_cnmha"]
+[ext_resource type="Texture2D" uid="uid://ikvbvpy3syio" path="res://BloodThirst/blood.png" id="5_osrbu"]
 
 [node name="Main" type="VBoxContainer"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -360.0
-offset_top = -540.0
-offset_right = 360.0
-offset_bottom = 540.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_horizontal = 3
+size_flags_vertical = 6
 script = ExtResource("1_llyyp")
 
 [node name="Config" type="PanelContainer" parent="."]
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 8
-size_flags_vertical = 4
+size_flags_vertical = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="Config"]
 layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
 [node name="ConfigButton" type="TextureButton" parent="Config/MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture_normal = ExtResource("2_gendj")
+stretch_mode = 5
 
 [node name="Heart" type="CenterContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_vertical = 2
 
 [node name="HeartButton" type="TextureButton" parent="Heart"]
 texture_filter = 1
-custom_minimum_size = Vector2(480, 480)
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
+action_mode = 0
 texture_normal = ExtResource("3_oxoyk")
 texture_pressed = ExtResource("4_cnmha")
-stretch_mode = 0
+stretch_mode = 4
 
 [node name="Stats" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+size_flags_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="Stats/CenterContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer2" type="CenterContainer" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BloodIcon" type="ColorRect" parent="Stats/CenterContainer2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Stats/CenterContainer2/BloodIcon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 10
+
+[node name="TextureRect" type="TextureRect" parent="Stats/CenterContainer2/BloodIcon/MarginContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("5_osrbu")
+
+[node name="BloodText" type="Label" parent="Stats/CenterContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "0"
+
+[node name="CenterContainer3" type="CenterContainer" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="Stats/CenterContainer3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Store" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
+size_flags_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Store"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="pressed" from="Heart/HeartButton" to="." method="_on_heart_button_pressed"]
