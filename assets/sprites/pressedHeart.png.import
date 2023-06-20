@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgffik2qder81"
-path="res://.godot/imported/bloodBarEmpty.png-0508c04775980b801c1be551672296f6.ctex"
+uid="uid://dkryu74dx1yq7"
+path="res://.godot/imported/pressedHeart.png-206137dba2670ab6dbbfcdca3eb45ef7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BloodThirst/bloodBarEmpty.png"
-dest_files=["res://.godot/imported/bloodBarEmpty.png-0508c04775980b801c1be551672296f6.ctex"]
+source_file="res://assets/sprites/pressedHeart.png"
+dest_files=["res://.godot/imported/pressedHeart.png-206137dba2670ab6dbbfcdca3eb45ef7.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ikvbvpy3syio"
-path="res://.godot/imported/blood.png-e9c27f2b7ccedb7f05600bef9cb2ecfc.ctex"
+uid="uid://dct7jnnmkpgma"
+path="res://.godot/imported/upgrades.png-ac61e941d2250d81e390abe1516564dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BloodThirst/blood.png"
-dest_files=["res://.godot/imported/blood.png-e9c27f2b7ccedb7f05600bef9cb2ecfc.ctex"]
+source_file="res://assets/sprites/upgrades.png"
+dest_files=["res://.godot/imported/upgrades.png-ac61e941d2250d81e390abe1516564dc.ctex"]
 
 [params]
 

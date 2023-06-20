@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkryu74dx1yq7"
-path="res://.godot/imported/pressedHeart.png-560e5da98a220ccbc65e4b3fa69f3a81.ctex"
+uid="uid://qu737jnoeapq"
+path="res://.godot/imported/laboratorio.png-28f2b10493817f85b4c655edd8f52579.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BloodThirst/pressedHeart.png"
-dest_files=["res://.godot/imported/pressedHeart.png-560e5da98a220ccbc65e4b3fa69f3a81.ctex"]
+source_file="res://assets/sprites/laboratorio.png"
+dest_files=["res://.godot/imported/laboratorio.png-28f2b10493817f85b4c655edd8f52579.ctex"]
 
 [params]
 

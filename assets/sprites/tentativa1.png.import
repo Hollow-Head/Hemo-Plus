@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blxquhdgi1yoj"
-path="res://.godot/imported/heart.png-f6f39df6fa3b6b5a8b2224bf82b33600.ctex"
+uid="uid://jx4ws6mmfra8"
+path="res://.godot/imported/tentativa1.png-9ce1cd3296747644bb5676c1c7ff3251.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BloodThirst/heart.png"
-dest_files=["res://.godot/imported/heart.png-f6f39df6fa3b6b5a8b2224bf82b33600.ctex"]
+source_file="res://assets/sprites/tentativa1.png"
+dest_files=["res://.godot/imported/tentativa1.png-9ce1cd3296747644bb5676c1c7ff3251.ctex"]
 
 [params]
 

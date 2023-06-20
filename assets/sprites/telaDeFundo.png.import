@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jx4ws6mmfra8"
-path="res://.godot/imported/tentativa1.png-1571fe66b041fca8390c50385efe9fbf.ctex"
+uid="uid://d1ubka0upoira"
+path="res://.godot/imported/telaDeFundo.png-93038d6650e0baa4c947ab29159f86b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BloodThirst/tentativa1.png"
-dest_files=["res://.godot/imported/tentativa1.png-1571fe66b041fca8390c50385efe9fbf.ctex"]
+source_file="res://assets/sprites/telaDeFundo.png"
+dest_files=["res://.godot/imported/telaDeFundo.png-93038d6650e0baa4c947ab29159f86b9.ctex"]
 
 [params]
 

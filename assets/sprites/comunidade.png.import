@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6d0tum47a1lp"
-path="res://.godot/imported/ideiaDoHud.png-59b3ad501ff782f1be1db7eef7e7295f.ctex"
+uid="uid://c1dwtspggynbn"
+path="res://.godot/imported/comunidade.png-c8f65da6d8bdc404de5a54dcf7331ae9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BloodThirst/ideiaDoHud.png"
-dest_files=["res://.godot/imported/ideiaDoHud.png-59b3ad501ff782f1be1db7eef7e7295f.ctex"]
+source_file="res://assets/sprites/comunidade.png"
+dest_files=["res://.godot/imported/comunidade.png-c8f65da6d8bdc404de5a54dcf7331ae9.ctex"]
 
 [params]
 

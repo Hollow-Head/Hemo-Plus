@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/upgrade_item.gd" id="1_d0fq3"]
 [ext_resource type="Texture2D" uid="uid://cafovsisisged" path="res://icon.svg" id="1_raii7"]
-[ext_resource type="Texture2D" uid="uid://ikvbvpy3syio" path="res://BloodThirst/blood.png" id="2_0a0a1"]
+[ext_resource type="Texture2D" uid="uid://ikvbvpy3syio" path="res://assets/sprites/blood.png" id="3_0hb74"]
 
 [node name="UpgradeItem" type="VBoxContainer"]
 custom_minimum_size = Vector2(720, 180)
@@ -63,7 +63,7 @@ size_flags_vertical = 4
 texture_normal = ExtResource("1_raii7")
 stretch_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/BuyButton"]
+[node name="BuyContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/BuyButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -77,12 +77,12 @@ offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/BuyButton/VBoxContainer"]
+[node name="Blood" type="HBoxContainer" parent="MarginContainer/HBoxContainer/BuyButton/BuyContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_vertical = 6
 
-[node name="BloodPrice" type="Label" parent="MarginContainer/HBoxContainer/BuyButton/VBoxContainer/HBoxContainer"]
+[node name="BloodPrice" type="Label" parent="MarginContainer/HBoxContainer/BuyButton/BuyContainer/Blood"]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
@@ -91,23 +91,23 @@ theme_override_font_sizes/font_size = 32
 text = "10K"
 horizontal_alignment = 1
 
-[node name="BloodIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/BuyButton/VBoxContainer/HBoxContainer"]
+[node name="BloodIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/BuyButton/BuyContainer/Blood"]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("2_0a0a1")
+texture = ExtResource("3_0hb74")
 stretch_mode = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/BuyButton/VBoxContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/BuyButton/BuyContainer/Blood"]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/BuyButton/VBoxContainer"]
+[node name="People" type="HBoxContainer" parent="MarginContainer/HBoxContainer/BuyButton/BuyContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_vertical = 6
 
-[node name="PeoplePrice" type="Label" parent="MarginContainer/HBoxContainer/BuyButton/VBoxContainer/HBoxContainer2"]
+[node name="PeoplePrice" type="Label" parent="MarginContainer/HBoxContainer/BuyButton/BuyContainer/People"]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 4
@@ -116,8 +116,8 @@ theme_override_colors/font_color = Color(1, 0.243137, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "10K"
 
-[node name="PeopleIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/BuyButton/VBoxContainer/HBoxContainer2"]
+[node name="PeopleIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/BuyButton/BuyContainer/People"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("2_0a0a1")
+texture = ExtResource("3_0hb74")
 stretch_mode = 3
