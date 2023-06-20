@@ -34,7 +34,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("2_gendj")
-stretch_mode = 5
+stretch_mode = 0
 
 [node name="Heart" type="CenterContainer" parent="."]
 layout_mode = 2
@@ -103,12 +103,42 @@ layout_mode = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Store" type="HBoxContainer" parent="."]
-custom_minimum_size = Vector2(0, 150)
+custom_minimum_size = Vector2(720, 150)
 layout_mode = 2
 size_flags_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="Store"]
+[node name="CenterContainer" type="CenterContainer" parent="Store"]
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="MenuButton" type="MenuButton" parent="Store/CenterContainer"]
+layout_mode = 2
+icon = ExtResource("2_gendj")
+icon_alignment = 1
+item_count = 1
+popup/item_0/text = ""
+popup/item_0/id = 0
+
+[node name="CenterContainer2" type="CenterContainer" parent="Store"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MenuButton" type="MenuButton" parent="Store/CenterContainer2"]
+layout_mode = 2
+
+[node name="CenterContainer3" type="CenterContainer" parent="Store"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MenuButton" type="MenuButton" parent="Store/CenterContainer3"]
+layout_mode = 2
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="pressed" from="Heart/HeartButton" to="." method="_on_heart_button_pressed"]
+[connection signal="toggled" from="Store/CenterContainer/MenuButton" to="." method="_on_menu_button_toggled"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

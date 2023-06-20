@@ -8,3 +8,6 @@ func _ready():
 		add_child(upI)
 		upI.things = upgrades
 		upI.atualizar()
+
+func _on_exit_button_toggled(button_pressed):
+	get_tree().change_scene_to_file("res://scenes/main.tscn")

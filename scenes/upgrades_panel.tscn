@@ -1,21 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfpv6xnnelgox"]
+[gd_scene load_steps=3 format=3 uid="uid://dfpv6xnnelgox"]
 
 [ext_resource type="Script" path="res://scenes/upgrades_panel.gd" id="1_3xmnr"]
+[ext_resource type="Texture2D" uid="uid://cafovsisisged" path="res://icon.svg" id="1_mtb0t"]
 
-[node name="ScrollContainer" type="ScrollContainer"]
-clip_contents = false
+[node name="UpgradesPanel" type="VBoxContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ExitButton" type="MenuButton" parent="."]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+icon = ExtResource("1_mtb0t")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+z_index = -1
+clip_contents = false
+layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
 
-[node name="UpgradesPanel" type="VBoxContainer" parent="."]
+[node name="UpgradesPanel" type="VBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 2
 script = ExtResource("1_3xmnr")
+
+[connection signal="toggled" from="ExitButton" to="ScrollContainer/UpgradesPanel" method="_on_exit_button_toggled"]
