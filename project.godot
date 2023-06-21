@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Variables="*res://scenes/variables.gd"
 Upgrades="*res://scenes/upgrades.gd"
+GlobalTimer="*res://scenes/global_timer.gd"
 
 [display]
 

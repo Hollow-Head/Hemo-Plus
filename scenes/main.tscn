@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://2a1pfbob5ssy"]
+[gd_scene load_steps=8 format=3 uid="uid://2a1pfbob5ssy"]
 
+[ext_resource type="Texture2D" uid="uid://d1ubka0upoira" path="res://assets/sprites/telaDeFundo.png" id="1_105xq"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_mga1v"]
 [ext_resource type="Texture2D" uid="uid://cafovsisisged" path="res://icon.svg" id="2_gendj"]
 [ext_resource type="Texture2D" uid="uid://blxquhdgi1yoj" path="res://assets/sprites/heart.png" id="3_tuyvf"]
 [ext_resource type="Texture2D" uid="uid://dkryu74dx1yq7" path="res://assets/sprites/pressedHeart.png" id="4_tbny6"]
 [ext_resource type="Texture2D" uid="uid://ikvbvpy3syio" path="res://assets/sprites/blood.png" id="5_0xpga"]
+[ext_resource type="Texture2D" uid="uid://dct7jnnmkpgma" path="res://assets/sprites/upgrades.png" id="7_vkctn"]
 
-[node name="Main" type="VBoxContainer"]
+[node name="MainControl" type="Control"]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -14,66 +17,103 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_105xq")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Main" type="VBoxContainer" parent="Panel/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -355.0
+offset_right = 360.0
+offset_bottom = 355.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_mga1v")
 
-[node name="Config" type="PanelContainer" parent="."]
+[node name="Config" type="PanelContainer" parent="Panel/TextureRect/Main"]
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="Config"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/TextureRect/Main/Config"]
 layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
 
-[node name="ConfigButton" type="TextureButton" parent="Config/MarginContainer"]
+[node name="ConfigButton" type="Button" parent="Panel/TextureRect/Main/Config/MarginContainer"]
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("2_gendj")
-stretch_mode = 0
+icon = ExtResource("2_gendj")
+flat = true
+expand_icon = true
 
-[node name="Heart" type="CenterContainer" parent="."]
+[node name="Heart" type="CenterContainer" parent="Panel/TextureRect/Main"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 2
 
-[node name="HeartButton" type="TextureButton" parent="Heart"]
+[node name="HeartButton" type="TextureButton" parent="Panel/TextureRect/Main/Heart"]
 texture_filter = 1
-custom_minimum_size = Vector2(300, 300)
+custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
 action_mode = 0
 texture_normal = ExtResource("3_tuyvf")
 texture_pressed = ExtResource("4_tbny6")
 stretch_mode = 4
 
-[node name="Stats" type="HBoxContainer" parent="."]
+[node name="Stats" type="HBoxContainer" parent="Panel/TextureRect/Main"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_vertical = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="Stats"]
+[node name="CenterContainer" type="CenterContainer" parent="Panel/TextureRect/Main/Stats"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ColorRect" type="ColorRect" parent="Stats/CenterContainer"]
+[node name="ColorRect" type="ColorRect" parent="Panel/TextureRect/Main/Stats/CenterContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 color = Color(0, 0, 0, 1)
 
-[node name="CenterContainer2" type="CenterContainer" parent="Stats"]
+[node name="CenterContainer2" type="CenterContainer" parent="Panel/TextureRect/Main/Stats"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="BloodIcon" type="ColorRect" parent="Stats/CenterContainer2"]
+[node name="BloodIcon" type="ColorRect" parent="Panel/TextureRect/Main/Stats/CenterContainer2"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 color = Color(0, 0, 0, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="Stats/CenterContainer2/BloodIcon"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/TextureRect/Main/Stats/CenterContainer2/BloodIcon"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -82,63 +122,63 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_top = 10
 
-[node name="TextureRect" type="TextureRect" parent="Stats/CenterContainer2/BloodIcon/MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="Panel/TextureRect/Main/Stats/CenterContainer2/BloodIcon/MarginContainer"]
 texture_filter = 1
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture = ExtResource("5_0xpga")
 
-[node name="BloodText" type="Label" parent="Stats/CenterContainer2"]
+[node name="BloodText" type="Label" parent="Panel/TextureRect/Main/Stats/CenterContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 42
 text = "0"
 
-[node name="CenterContainer3" type="CenterContainer" parent="Stats"]
+[node name="CenterContainer3" type="CenterContainer" parent="Panel/TextureRect/Main/Stats"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ColorRect" type="ColorRect" parent="Stats/CenterContainer3"]
+[node name="ColorRect" type="ColorRect" parent="Panel/TextureRect/Main/Stats/CenterContainer3"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Store" type="HBoxContainer" parent="."]
+[node name="Store" type="HBoxContainer" parent="Panel/TextureRect/Main"]
 custom_minimum_size = Vector2(720, 150)
 layout_mode = 2
 size_flags_vertical = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="Store"]
+[node name="CenterContainer" type="CenterContainer" parent="Panel/TextureRect/Main/Store"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MenuButton" type="MenuButton" parent="Store/CenterContainer"]
+[node name="MenuButton" type="MenuButton" parent="Panel/TextureRect/Main/Store/CenterContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-icon = ExtResource("2_gendj")
+icon = ExtResource("7_vkctn")
 icon_alignment = 1
-item_count = 1
-popup/item_0/text = ""
-popup/item_0/id = 0
+expand_icon = true
 
-[node name="CenterContainer2" type="CenterContainer" parent="Store"]
+[node name="CenterContainer2" type="CenterContainer" parent="Panel/TextureRect/Main/Store"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MenuButton" type="MenuButton" parent="Store/CenterContainer2"]
+[node name="MenuButton" type="MenuButton" parent="Panel/TextureRect/Main/Store/CenterContainer2"]
 layout_mode = 2
 
-[node name="CenterContainer3" type="CenterContainer" parent="Store"]
+[node name="CenterContainer3" type="CenterContainer" parent="Panel/TextureRect/Main/Store"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MenuButton" type="MenuButton" parent="Store/CenterContainer3"]
+[node name="MenuButton" type="MenuButton" parent="Panel/TextureRect/Main/Store/CenterContainer3"]
 layout_mode = 2
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="Panel/TextureRect/Main"]
 autostart = true
 
-[connection signal="pressed" from="Heart/HeartButton" to="." method="_on_heart_button_pressed"]
-[connection signal="toggled" from="Store/CenterContainer/MenuButton" to="." method="_on_menu_button_toggled"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Panel/TextureRect/Main/Heart/HeartButton" to="Panel/TextureRect/Main" method="_on_heart_button_pressed"]
+[connection signal="pressed" from="Panel/TextureRect/Main/Store/CenterContainer/MenuButton" to="Panel/TextureRect/Main" method="_on_menu_button_pressed"]
+[connection signal="timeout" from="Panel/TextureRect/Main/Timer" to="Panel/TextureRect/Main" method="_on_timer_timeout"]
