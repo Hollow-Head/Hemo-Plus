@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://2a1pfbob5ssy"]
+[gd_scene load_steps=10 format=3 uid="uid://2a1pfbob5ssy"]
 
 [ext_resource type="Texture2D" uid="uid://d1ubka0upoira" path="res://assets/sprites/telaDeFundo.png" id="1_105xq"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_mga1v"]
-[ext_resource type="Texture2D" uid="uid://cafovsisisged" path="res://icon.svg" id="2_gendj"]
+[ext_resource type="Texture2D" uid="uid://clbunwhgxq38m" path="res://assets/sprites/configurações.png" id="3_7vyhg"]
 [ext_resource type="Texture2D" uid="uid://blxquhdgi1yoj" path="res://assets/sprites/heart.png" id="3_tuyvf"]
 [ext_resource type="Texture2D" uid="uid://dkryu74dx1yq7" path="res://assets/sprites/pressedHeart.png" id="4_tbny6"]
 [ext_resource type="Texture2D" uid="uid://ikvbvpy3syio" path="res://assets/sprites/blood.png" id="5_0xpga"]
-[ext_resource type="Texture2D" uid="uid://dct7jnnmkpgma" path="res://assets/sprites/upgrades.png" id="7_vkctn"]
+[ext_resource type="Texture2D" uid="uid://cs8pteib4vmdb" path="res://assets/sprites/upgradesNovo.png" id="7_xtmvy"]
+[ext_resource type="Texture2D" uid="uid://buxo2n2luhcvx" path="res://assets/sprites/comunidadeNovo.png" id="8_gdvr5"]
+[ext_resource type="Texture2D" uid="uid://bq8kd75xjxiwd" path="res://assets/sprites/laboratorioNovo.png" id="9_j4l1o"]
 
 [node name="MainControl" type="Control"]
 layout_mode = 3
@@ -68,11 +70,13 @@ theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
 [node name="ConfigButton" type="Button" parent="Panel/TextureRect/Main/Config/MarginContainer"]
+texture_filter = 1
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-icon = ExtResource("2_gendj")
+action_mode = 0
+icon = ExtResource("3_7vyhg")
 flat = true
 expand_icon = true
 
@@ -156,7 +160,8 @@ size_flags_horizontal = 3
 texture_filter = 1
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-icon = ExtResource("7_vkctn")
+toggle_mode = false
+icon = ExtResource("7_xtmvy")
 icon_alignment = 1
 expand_icon = true
 
@@ -166,7 +171,13 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="MenuButton" type="MenuButton" parent="Panel/TextureRect/Main/Store/CenterContainer2"]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
+toggle_mode = false
+icon = ExtResource("8_gdvr5")
+icon_alignment = 1
+expand_icon = true
 
 [node name="CenterContainer3" type="CenterContainer" parent="Panel/TextureRect/Main/Store"]
 custom_minimum_size = Vector2(150, 150)
@@ -174,7 +185,13 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="MenuButton" type="MenuButton" parent="Panel/TextureRect/Main/Store/CenterContainer3"]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
+toggle_mode = false
+icon = ExtResource("9_j4l1o")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Timer" type="Timer" parent="Panel/TextureRect/Main"]
 autostart = true
