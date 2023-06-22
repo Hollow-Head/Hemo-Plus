@@ -14,7 +14,6 @@ var things = {}
 
 func atualizar():
 	icon.texture = load(things.img)
-	icon.size = Vector2(168,168)
 	Uname.text = things.name
 	desc.text = things.description
 	bloodPrice.text = things.blood_price	
