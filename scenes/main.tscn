@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://blxquhdgi1yoj" path="res://assets/sprites/heart.png" id="3_tuyvf"]
 [ext_resource type="Texture2D" uid="uid://dkryu74dx1yq7" path="res://assets/sprites/pressedHeart.png" id="4_tbny6"]
 [ext_resource type="Texture2D" uid="uid://ikvbvpy3syio" path="res://assets/sprites/blood.png" id="5_0xpga"]
-[ext_resource type="Texture2D" uid="uid://dct7jnnmkpgma" path="res://assets/sprites/upgrades.png" id="6_ls7jx"]
+[ext_resource type="Texture2D" uid="uid://bgffik2qder81" path="res://assets/sprites/bloodBarEmpty.png" id="6_lgxun"]
 [ext_resource type="Texture2D" uid="uid://cs8pteib4vmdb" path="res://assets/sprites/upgradesNovo.png" id="7_xtmvy"]
 [ext_resource type="Texture2D" uid="uid://buxo2n2luhcvx" path="res://assets/sprites/comunidadeNovo.png" id="8_gdvr5"]
 [ext_resource type="Texture2D" uid="uid://d2gxhgvveyo2y" path="res://assets/sprites/bonequinho.png" id="8_vv16x"]
@@ -108,9 +108,9 @@ size_flags_horizontal = 3
 
 [node name="TextureRect" type="TextureRect" parent="Panel/TextureRect/Main/Stats/CenterContainer"]
 texture_filter = 1
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-texture = ExtResource("6_ls7jx")
+texture = ExtResource("6_lgxun")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel/TextureRect/Main/Stats"]
 layout_mode = 2
