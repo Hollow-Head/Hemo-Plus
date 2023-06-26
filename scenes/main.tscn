@@ -119,6 +119,7 @@ size_flags_vertical = 6
 theme_override_constants/margin_top = 10
 
 [node name="BloodText" type="Label" parent="Panel/TextureRect/Main/Stats/MarginContainer"]
+texture_filter = 1
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 0
