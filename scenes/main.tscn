@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://2a1pfbob5ssy"]
+[gd_scene load_steps=12 format=3 uid="uid://2a1pfbob5ssy"]
 
 [ext_resource type="Texture2D" uid="uid://d1ubka0upoira" path="res://assets/sprites/telaDeFundo.png" id="1_105xq"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_mga1v"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://blxquhdgi1yoj" path="res://assets/sprites/heart.png" id="3_tuyvf"]
 [ext_resource type="Texture2D" uid="uid://dkryu74dx1yq7" path="res://assets/sprites/pressedHeart.png" id="4_tbny6"]
 [ext_resource type="Texture2D" uid="uid://ikvbvpy3syio" path="res://assets/sprites/blood.png" id="5_0xpga"]
-[ext_resource type="Texture2D" uid="uid://dct7jnnmkpgma" path="res://assets/sprites/upgrades.png" id="6_ls7jx"]
 [ext_resource type="Texture2D" uid="uid://cs8pteib4vmdb" path="res://assets/sprites/upgradesNovo.png" id="7_xtmvy"]
 [ext_resource type="Texture2D" uid="uid://buxo2n2luhcvx" path="res://assets/sprites/comunidadeNovo.png" id="8_gdvr5"]
 [ext_resource type="Texture2D" uid="uid://d2gxhgvveyo2y" path="res://assets/sprites/bonequinho.png" id="8_vv16x"]
@@ -102,50 +101,95 @@ custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_vertical = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="Panel/TextureRect/Main/Stats"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="TextureRect" type="TextureRect" parent="Panel/TextureRect/Main/Stats/CenterContainer"]
-texture_filter = 1
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-texture = ExtResource("6_ls7jx")
-
 [node name="MarginContainer" type="MarginContainer" parent="Panel/TextureRect/Main/Stats"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
 theme_override_constants/margin_top = 10
 
-[node name="BloodText" type="Label" parent="Panel/TextureRect/Main/Stats/MarginContainer"]
-layout_direction = 2
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 6
-theme_override_colors/font_color = Color(1, 0.258824, 0.258824, 1)
-theme_override_font_sizes/font_size = 42
-text = "0000"
-text_direction = 1
-
 [node name="TextureRect" type="TextureRect" parent="Panel/TextureRect/Main/Stats/MarginContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("7_xtmvy")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panel/TextureRect/Main/Stats/MarginContainer/TextureRect"]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -24.0
+offset_right = 100.0
+offset_bottom = 24.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+
+[node name="Blood" type="MarginContainer" parent="Panel/TextureRect/Main/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_constants/margin_top = 10
+
+[node name="BloodIcon" type="TextureRect" parent="Panel/TextureRect/Main/Stats/Blood"]
 texture_filter = 1
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
-size_flags_horizontal = 4
 texture = ExtResource("5_0xpga")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CenterContainer3" type="CenterContainer" parent="Panel/TextureRect/Main/Stats"]
+[node name="BloodText" type="Label" parent="Panel/TextureRect/Main/Stats/Blood/BloodIcon"]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -24.0
+offset_right = 100.0
+offset_bottom = 24.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+
+[node name="People" type="MarginContainer" parent="Panel/TextureRect/Main/Stats"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_constants/margin_top = 10
 
-[node name="TextureRect" type="TextureRect" parent="Panel/TextureRect/Main/Stats/CenterContainer3"]
+[node name="PeopleIcon" type="TextureRect" parent="Panel/TextureRect/Main/Stats/People"]
 texture_filter = 1
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 texture = ExtResource("8_vv16x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PeopleText" type="Label" parent="Panel/TextureRect/Main/Stats/People/PeopleIcon"]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -24.0
+offset_right = 100.0
+offset_bottom = 24.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
 
 [node name="TextureRect" type="TextureRect" parent="Panel/TextureRect/Main"]
 custom_minimum_size = Vector2(0, 150)
