@@ -122,3 +122,5 @@ texture_filter = 1
 layout_mode = 2
 texture = ExtResource("3_0hb74")
 stretch_mode = 3
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/BuyButton" to="." method="_on_buy_button_pressed"]
