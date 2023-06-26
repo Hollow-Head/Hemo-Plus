@@ -28,3 +28,10 @@ func atualizar():
 		
 	
 	
+
+
+func _on_buy_button_pressed():
+	if (Variables.blood >= int(things.blood_price)):
+		things.blood_price += things.blood_price * 2 ##ajeita e muda de int pra string
+		bloodPrice.text = things.blood_price
+		
