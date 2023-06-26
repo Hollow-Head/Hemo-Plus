@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dlb3nxo5k8ku0" path="res://assets/sprites/base.png" id="1_3qs6u"]
 [ext_resource type="Script" path="res://scenes/upgrades_panel.gd" id="1_3xmnr"]
-[ext_resource type="Texture2D" uid="uid://cafovsisisged" path="res://icon.svg" id="1_mtb0t"]
+[ext_resource type="Texture2D" uid="uid://04iiqnvsuyio" path="res://assets/sprites/X.png" id="2_js34b"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7b5ua"]
 
@@ -62,11 +62,12 @@ theme_override_constants/margin_right = 25
 
 [node name="ExitButton" type="MenuButton" parent="Panel/TextureRect/UpgradesPanel/Header/MarginContainer"]
 z_index = 1
+texture_filter = 1
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-icon = ExtResource("1_mtb0t")
+icon = ExtResource("2_js34b")
 expand_icon = true
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel/TextureRect/UpgradesPanel"]
