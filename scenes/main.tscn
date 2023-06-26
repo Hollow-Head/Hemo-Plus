@@ -149,6 +149,7 @@ layout_mode = 2
 texture = ExtResource("8_vv16x")
 
 [node name="TextureRect" type="TextureRect" parent="Panel/TextureRect/Main"]
+texture_filter = 1
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 size_flags_vertical = 3
