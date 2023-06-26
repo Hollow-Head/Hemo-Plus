@@ -6,20 +6,18 @@
 [node name="Control" type="Control"]
 clip_contents = true
 layout_mode = 3
-anchor_left = 0.021
-anchor_top = 0.056
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -15.12
-offset_top = -60.48
-offset_right = -707.0
-offset_bottom = -1021.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 texture_filter = 1
 clip_contents = true
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -31,5 +29,6 @@ offset_bottom = 3.674
 size_flags_stretch_ratio = 0.0
 step = 7.0
 fill_mode = 3
+nine_patch_stretch = true
 texture_over = ExtResource("1_kq4t6")
 texture_progress = ExtResource("2_tmulm")

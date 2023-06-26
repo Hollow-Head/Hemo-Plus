@@ -11,6 +11,7 @@ extends VBoxContainer
 @onready var people = $MarginContainer/HBoxContainer/BuyButton/BuyContainer/People
 @onready var blood = $MarginContainer/HBoxContainer/BuyButton/BuyContainer/Blood
 var things = {}
+var whatitIs
 
 func atualizar():
 	icon.texture = load(things.img)
@@ -20,10 +21,12 @@ func atualizar():
 	peoplePrice.text = things.people_price
 	
 	if (things.blood_price == ""):
+		whatitIs = "people"
 		buyContainer.remove_child(blood)
 		
 				
 	if (things.people_price == ""):
+		whatitIs = "blood"
 		buyContainer.remove_child(people)
 		
 	
@@ -31,10 +34,17 @@ func atualizar():
 
 
 func _on_buy_button_pressed():
-	if (Variables.blood >= float(things.blood_price)):
-		Variables.blood -= float(things.blood_price)
-		Upgrades.BPC += float(things.BPC)
-		Upgrades.BPS += float(things.BPS)
-		things.blood_price = str(roundf(float(things.blood_price) * float(things.Step)))
-		bloodPrice.text = things.blood_price
+	if (whatitIs == "blood"):
+		if (Variables.blood >= float(things.blood_price)):
+			Variables.blood -= float(things.blood_price)
+			Upgrades.BPC += float(things.BPC)
+#			Upgrades.BPS += float(things.BPS)
+			things.blood_price = str(roundf(float(things.blood_price) * float(things.Step)))
+			bloodPrice.text = things.blood_price
+	elif (whatitIs == "people"):
+		if (Variables.people >= int(things.people_price)):
+#			Upgrades.BPC += float(things.BPC)
+			Upgrades.BPS += float(things.BPS)
+			things.people_price = str((int(things.people_price) * int(things.Step)))
+			peoplePrice.text = things.people_price
 		

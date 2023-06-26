@@ -50,6 +50,26 @@ var list = [{
 	"description": "\"O tipo mais raro de sangue no mundo, por possuir fator RH nulo são doadores universais.\nExistem cerca de 50 pessoas que possuem tal sangue no mundo atualmente.\"",
 	"img": "res://assets/sprites/dourado.png",
 	}]
+var comm = [{
+	"name": "Boca a Boca",
+	"BPC": "0.0",
+	"BPS": "0.5",
+	"Step": "2",
+	"blood_price": "",
+	"people_price": "1",
+	"description": "\"Contar para os vizinhos e amigos.\"\nAumenta 0.1 Sangues Por Segundo.",
+	"img": "res://assets/sprites/dialogo.png",
+	},
+	{
+	"name": "Campanha",
+	"BPC": "0.0",
+	"BPS": "10.0",
+	"Step": "2",
+	"blood_price": "",
+	"people_price": "100",
+	"description": "\"Realizar campanhas pró doação de sangue.\"\nAumenta 10.0 Sangues Por Segundo.",
+	"img": "res://assets/sprites/megafone.png",
+	}]
 
 var BPS = 0.0
 var BPC = 1.0

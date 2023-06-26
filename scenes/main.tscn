@@ -225,4 +225,5 @@ autostart = true
 
 [connection signal="pressed" from="Panel/TextureRect/Main/Heart/HeartButton" to="Panel/TextureRect/Main" method="_on_heart_button_pressed"]
 [connection signal="pressed" from="Panel/TextureRect/Main/TextureRect/Store/CenterContainer/UpgradeButton" to="Panel/TextureRect/Main" method="_on_upgrade_button_pressed"]
+[connection signal="pressed" from="Panel/TextureRect/Main/TextureRect/Store/CenterContainer2/CommunityButton" to="Panel/TextureRect/Main" method="_on_community_button_pressed"]
 [connection signal="timeout" from="Panel/TextureRect/Main/Timer" to="Panel/TextureRect/Main" method="_on_timer_timeout"]

@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://i0qp5v2yhke4"]
+[gd_scene load_steps=6 format=3 uid="uid://i0qp5v2yhke4"]
 
 [ext_resource type="Script" path="res://scenes/upgrade_item.gd" id="1_d0fq3"]
 [ext_resource type="Texture2D" uid="uid://cafovsisisged" path="res://icon.svg" id="1_raii7"]
 [ext_resource type="Texture2D" uid="uid://ikvbvpy3syio" path="res://assets/sprites/blood.png" id="3_0hb74"]
+[ext_resource type="Texture2D" uid="uid://ca8plai56mqio" path="res://assets/sprites/compraEPreco.png" id="3_qb8fy"]
+[ext_resource type="Texture2D" uid="uid://d2gxhgvveyo2y" path="res://assets/sprites/bonequinho.png" id="5_0ofr1"]
 
 [node name="UpgradeItem" type="VBoxContainer"]
 custom_minimum_size = Vector2(720, 180)
@@ -57,11 +59,13 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="BuyButton" type="TextureButton" parent="MarginContainer/HBoxContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(168, 168)
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
-texture_normal = ExtResource("1_raii7")
+texture_normal = ExtResource("3_qb8fy")
 stretch_mode = 0
 
 [node name="BuyContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/BuyButton"]
@@ -78,10 +82,19 @@ offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/BuyButton/BuyContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.14902, 0.258824, 0, 1)
+text = "COMPRAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Blood" type="HBoxContainer" parent="MarginContainer/HBoxContainer/BuyButton/BuyContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 6
+size_flags_vertical = 10
 
 [node name="BloodPrice" type="Label" parent="MarginContainer/HBoxContainer/BuyButton/BuyContainer/Blood"]
 texture_filter = 1
@@ -106,7 +119,7 @@ layout_mode = 2
 [node name="People" type="HBoxContainer" parent="MarginContainer/HBoxContainer/BuyButton/BuyContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 6
+size_flags_vertical = 10
 
 [node name="PeoplePrice" type="Label" parent="MarginContainer/HBoxContainer/BuyButton/BuyContainer/People"]
 texture_filter = 1
@@ -120,7 +133,7 @@ text = "10K"
 [node name="PeopleIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/BuyButton/BuyContainer/People"]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("3_0hb74")
+texture = ExtResource("5_0ofr1")
 stretch_mode = 3
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/BuyButton" to="." method="_on_buy_button_pressed"]
