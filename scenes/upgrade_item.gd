@@ -31,7 +31,10 @@ func atualizar():
 
 
 func _on_buy_button_pressed():
-	if (Variables.blood >= int(things.blood_price)):
-		things.blood_price += things.blood_price * 2 ##ajeita e muda de int pra string
+	if (Variables.blood >= float(things.blood_price)):
+		Variables.blood -= float(things.blood_price)
+		Upgrades.BPC += float(things.BPC)
+		Upgrades.BPS += float(things.BPS)
+		things.blood_price = str(roundf(float(things.blood_price) * float(things.Step)))
 		bloodPrice.text = things.blood_price
 		

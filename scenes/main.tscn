@@ -99,37 +99,7 @@ stretch_mode = 4
 [node name="Stats" type="HBoxContainer" parent="Panel/TextureRect/Main"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-size_flags_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="Panel/TextureRect/Main/Stats"]
-layout_mode = 2
-size_flags_horizontal = 3
 size_flags_vertical = 6
-theme_override_constants/margin_top = 10
-
-[node name="TextureRect" type="TextureRect" parent="Panel/TextureRect/Main/Stats/MarginContainer"]
-texture_filter = 1
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-texture = ExtResource("7_xtmvy")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Label" type="Label" parent="Panel/TextureRect/Main/Stats/MarginContainer/TextureRect"]
-texture_filter = 1
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -24.0
-offset_right = 100.0
-offset_bottom = 24.0
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
-text = "0"
-horizontal_alignment = 2
 
 [node name="Blood" type="MarginContainer" parent="Panel/TextureRect/Main/Stats"]
 layout_mode = 2
@@ -212,7 +182,7 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MenuButton" type="MenuButton" parent="Panel/TextureRect/Main/TextureRect/Store/CenterContainer"]
+[node name="UpgradeButton" type="MenuButton" parent="Panel/TextureRect/Main/TextureRect/Store/CenterContainer"]
 texture_filter = 1
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
@@ -226,7 +196,7 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MenuButton" type="MenuButton" parent="Panel/TextureRect/Main/TextureRect/Store/CenterContainer2"]
+[node name="CommunityButton" type="MenuButton" parent="Panel/TextureRect/Main/TextureRect/Store/CenterContainer2"]
 texture_filter = 1
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
@@ -240,7 +210,7 @@ custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MenuButton" type="MenuButton" parent="Panel/TextureRect/Main/TextureRect/Store/CenterContainer3"]
+[node name="ResearchButton" type="MenuButton" parent="Panel/TextureRect/Main/TextureRect/Store/CenterContainer3"]
 texture_filter = 1
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
@@ -253,5 +223,5 @@ expand_icon = true
 autostart = true
 
 [connection signal="pressed" from="Panel/TextureRect/Main/Heart/HeartButton" to="Panel/TextureRect/Main" method="_on_heart_button_pressed"]
-[connection signal="pressed" from="Panel/TextureRect/Main/TextureRect/Store/CenterContainer/MenuButton" to="Panel/TextureRect/Main" method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Panel/TextureRect/Main/TextureRect/Store/CenterContainer/UpgradeButton" to="Panel/TextureRect/Main" method="_on_upgrade_button_pressed"]
 [connection signal="timeout" from="Panel/TextureRect/Main/Timer" to="Panel/TextureRect/Main" method="_on_timer_timeout"]
