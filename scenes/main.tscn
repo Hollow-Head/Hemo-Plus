@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://2a1pfbob5ssy"]
+[gd_scene load_steps=13 format=3 uid="uid://2a1pfbob5ssy"]
 
 [ext_resource type="Texture2D" uid="uid://d1ubka0upoira" path="res://assets/sprites/telaDeFundo.png" id="1_105xq"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_mga1v"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d2gxhgvveyo2y" path="res://assets/sprites/bonequinho.png" id="8_vv16x"]
 [ext_resource type="Texture2D" uid="uid://dlb3nxo5k8ku0" path="res://assets/sprites/base.png" id="9_4tr4f"]
 [ext_resource type="Texture2D" uid="uid://bq8kd75xjxiwd" path="res://assets/sprites/laboratorioNovo.png" id="9_j4l1o"]
+[ext_resource type="AudioStream" uid="uid://cjghgvbugwmo6" path="res://Sounds/SongNoDrums.mp3" id="12_otwt3"]
 
 [node name="MainControl" type="Control"]
 layout_mode = 3
@@ -223,7 +224,12 @@ expand_icon = true
 [node name="Timer" type="Timer" parent="Panel/TextureRect/Main"]
 autostart = true
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Panel/TextureRect/Main"]
+stream = ExtResource("12_otwt3")
+autoplay = true
+
 [connection signal="pressed" from="Panel/TextureRect/Main/Heart/HeartButton" to="Panel/TextureRect/Main" method="_on_heart_button_pressed"]
 [connection signal="pressed" from="Panel/TextureRect/Main/TextureRect/Store/CenterContainer/UpgradeButton" to="Panel/TextureRect/Main" method="_on_upgrade_button_pressed"]
 [connection signal="pressed" from="Panel/TextureRect/Main/TextureRect/Store/CenterContainer2/CommunityButton" to="Panel/TextureRect/Main" method="_on_community_button_pressed"]
 [connection signal="timeout" from="Panel/TextureRect/Main/Timer" to="Panel/TextureRect/Main" method="_on_timer_timeout"]
+[connection signal="finished" from="Panel/TextureRect/Main/AudioStreamPlayer" to="Panel/TextureRect/Main" method="_on_audio_stream_player_finished"]

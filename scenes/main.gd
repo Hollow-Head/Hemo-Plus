@@ -34,3 +34,7 @@ func _on_community_button_pressed():
 	visible = false
 	var panel = communityPanel.instantiate()
 	get_parent().get_parent().get_parent().get_parent().add_child(panel)
+
+
+func _on_audio_stream_player_finished():
+	$AudioStreamPlayer.play()
