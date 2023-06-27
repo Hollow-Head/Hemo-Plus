@@ -1,8 +1,9 @@
 extends VBoxContainer
 
-@onready var button = $Heart/HeartButton
+@onready var button = $HBoxContainer/Heart/HeartButton
 @onready var bloodText = $Stats/Blood/BloodIcon/BloodText
 @onready var peopleText = $Stats/People/PeopleIcon/PeopleText
+@onready var bar = $HBoxContainer/TextureProgressBar
 @onready var upgradesPanel = preload("res://scenes/upgrades_panel.tscn")
 
 func _on_heart_button_pressed():
@@ -15,6 +16,8 @@ func _on_heart_button_pressed():
 func _process(delta):
 	bloodText.text = str(roundf(Variables.blood))
 	peopleText.text = str(Variables.people)
+	bar.value = Variables.blood
+	
 
 func _on_timer_timeout():
 	Variables.blood += Upgrades.BPS

@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://berv33hmbqdik"]
+[gd_scene load_steps=5 format=3 uid="uid://berv33hmbqdik"]
 
-[ext_resource type="Texture2D" uid="uid://bgffik2qder81" path="res://assets/sprites/bloodBarEmpty.png" id="1_kq4t6"]
+[ext_resource type="Texture2D" uid="uid://nj1s5vlarelc" path="res://assets/sprites/bloodBarFull.png" id="1_5r5j6"]
 [ext_resource type="Texture2D" uid="uid://boea7h5ck0uho" path="res://BloodThirst/bloodBarBackground.png" id="2_tmulm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pvsb"]
+atlas = ExtResource("1_5r5j6")
+region = Rect2(25, 3, 13, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2i3st"]
+atlas = SubResource("AtlasTexture_0pvsb")
 
 [node name="Control" type="Control"]
 clip_contents = true
@@ -12,8 +19,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -15.12
 offset_top = -60.48
-offset_right = -707.0
-offset_bottom = -1021.0
+offset_right = 20.0
+offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -31,5 +38,6 @@ offset_bottom = 3.674
 size_flags_stretch_ratio = 0.0
 step = 7.0
 fill_mode = 3
-texture_over = ExtResource("1_kq4t6")
+nine_patch_stretch = true
+texture_over = SubResource("AtlasTexture_2i3st")
 texture_progress = ExtResource("2_tmulm")
