@@ -1,12 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfpv6xnnelgox"]
+[gd_scene load_steps=5 format=3 uid="uid://ccpx8yymiai42"]
 
-[ext_resource type="Texture2D" uid="uid://dlb3nxo5k8ku0" path="res://assets/sprites/base.png" id="1_3qs6u"]
-[ext_resource type="Script" path="res://scenes/upgrades_panel.gd" id="1_3xmnr"]
-[ext_resource type="Texture2D" uid="uid://04iiqnvsuyio" path="res://assets/sprites/X.png" id="2_i8r7j"]
+[ext_resource type="Texture2D" uid="uid://dlb3nxo5k8ku0" path="res://assets/sprites/base.png" id="1_1qil4"]
+[ext_resource type="Texture2D" uid="uid://04iiqnvsuyio" path="res://assets/sprites/X.png" id="2_whsn5"]
+[ext_resource type="Script" path="res://CommunityPanel.gd" id="3_ghid4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7b5ua"]
 
-[node name="UpgradesControl" type="Control"]
+[node name="CommuntityControl" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,9 +30,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_3qs6u")
+texture = ExtResource("1_1qil4")
 
-[node name="UpgradesPanel" type="VBoxContainer" parent="Panel/TextureRect"]
+[node name="CommunityPanel" type="VBoxContainer" parent="Panel/TextureRect"]
 z_as_relative = false
 layout_mode = 1
 anchors_preset = 15
@@ -44,12 +44,12 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = -1
 
-[node name="Header" type="ColorRect" parent="Panel/TextureRect/UpgradesPanel"]
+[node name="Header" type="ColorRect" parent="Panel/TextureRect/CommunityPanel"]
 custom_minimum_size = Vector2(720, 100)
 layout_mode = 2
 color = Color(0, 0, 0, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel/TextureRect/UpgradesPanel/Header"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/TextureRect/CommunityPanel/Header"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 1
 anchors_preset = 1
@@ -60,28 +60,28 @@ offset_bottom = 40.0
 grow_horizontal = 0
 theme_override_constants/margin_right = 25
 
-[node name="ExitButton" type="MenuButton" parent="Panel/TextureRect/UpgradesPanel/Header/MarginContainer"]
+[node name="ExitButton" type="MenuButton" parent="Panel/TextureRect/CommunityPanel/Header/MarginContainer"]
 z_index = 1
 texture_filter = 1
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-icon = ExtResource("2_i8r7j")
+icon = ExtResource("2_whsn5")
 expand_icon = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Panel/TextureRect/UpgradesPanel"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/TextureRect/CommunityPanel"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_7b5ua")
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
 
-[node name="UpgradesPanel" type="VBoxContainer" parent="Panel/TextureRect/UpgradesPanel/ScrollContainer"]
+[node name="CommunityPanel" type="VBoxContainer" parent="Panel/TextureRect/CommunityPanel/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 2
-script = ExtResource("1_3xmnr")
+script = ExtResource("3_ghid4")
 
-[connection signal="toggled" from="Panel/TextureRect/UpgradesPanel/Header/MarginContainer/ExitButton" to="Panel/TextureRect/UpgradesPanel/ScrollContainer/UpgradesPanel" method="_on_exit_button_toggled"]
+[connection signal="toggled" from="Panel/TextureRect/CommunityPanel/Header/MarginContainer/ExitButton" to="Panel/TextureRect/CommunityPanel/ScrollContainer/CommunityPanel" method="_on_exit_button_toggled" flags=18]

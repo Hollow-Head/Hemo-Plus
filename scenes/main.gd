@@ -5,6 +5,7 @@ extends VBoxContainer
 @onready var peopleText = $Stats/People/PeopleIcon/PeopleText
 @onready var bar = $HBoxContainer/TextureProgressBar
 @onready var upgradesPanel = preload("res://scenes/upgrades_panel.tscn")
+@onready var communityPanel = preload("res://scenes/communtity_panel.tscn")
 
 func _on_heart_button_pressed():
 	Variables.blood += 1 * Upgrades.BPC
@@ -30,3 +31,13 @@ func _on_upgrade_button_pressed():
 	var panel = upgradesPanel.instantiate()
 	get_parent().get_parent().get_parent().get_parent().add_child(panel)
 
+
+
+func _on_community_button_pressed():
+	visible = false
+	var panel = communityPanel.instantiate()
+	get_parent().get_parent().get_parent().get_parent().add_child(panel)
+
+
+func _on_audio_stream_player_finished():
+	$AudioStreamPlayer.play()
