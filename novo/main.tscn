@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://db31appe877m3"]
+
+[ext_resource type="PackedScene" uid="uid://dux6lxhru0xws" path="res://novo/UpperRow.tscn" id="1_lj5jo"]
+[ext_resource type="PackedScene" uid="uid://cq65vco0xdof3" path="res://novo/MiddleRow.tscn" id="2_006js"]
+[ext_resource type="PackedScene" uid="uid://b6fot2kptc7qp" path="res://novo/lower_row.tscn" id="3_npdyf"]
+
+[node name="Main" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UpperRow" parent="." instance=ExtResource("1_lj5jo")]
+layout_mode = 2
+
+[node name="MiddleRow" parent="." instance=ExtResource("2_006js")]
+layout_mode = 2
+
+[node name="LowerRow" parent="." instance=ExtResource("3_npdyf")]
+layout_mode = 2

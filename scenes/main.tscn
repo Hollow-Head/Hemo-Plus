@@ -1,26 +1,17 @@
-[gd_scene load_steps=15 format=3 uid="uid://2a1pfbob5ssy"]
+[gd_scene load_steps=13 format=3 uid="uid://2a1pfbob5ssy"]
 
 [ext_resource type="Texture2D" uid="uid://d1ubka0upoira" path="res://assets/sprites/telaDeFundo.png" id="1_105xq"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_mga1v"]
 [ext_resource type="Texture2D" uid="uid://clbunwhgxq38m" path="res://assets/sprites/configurações.png" id="3_7vyhg"]
 [ext_resource type="Texture2D" uid="uid://blxquhdgi1yoj" path="res://assets/sprites/heart.png" id="3_tuyvf"]
 [ext_resource type="Texture2D" uid="uid://dkryu74dx1yq7" path="res://assets/sprites/pressedHeart.png" id="4_tbny6"]
-[ext_resource type="Texture2D" uid="uid://cvvgmcdn2bubf" path="res://assets/sprites/bloodBarAtlas.png" id="4_uwv7y"]
 [ext_resource type="Texture2D" uid="uid://ikvbvpy3syio" path="res://assets/sprites/blood.png" id="5_0xpga"]
+[ext_resource type="PackedScene" uid="uid://ch7465kfeyxue" path="res://novo/bar.tscn" id="6_qaybx"]
 [ext_resource type="Texture2D" uid="uid://cs8pteib4vmdb" path="res://assets/sprites/upgradesNovo.png" id="7_xtmvy"]
 [ext_resource type="Texture2D" uid="uid://buxo2n2luhcvx" path="res://assets/sprites/comunidadeNovo.png" id="8_gdvr5"]
 [ext_resource type="Texture2D" uid="uid://d2gxhgvveyo2y" path="res://assets/sprites/bonequinho.png" id="8_vv16x"]
 [ext_resource type="Texture2D" uid="uid://dlb3nxo5k8ku0" path="res://assets/sprites/base.png" id="9_4tr4f"]
 [ext_resource type="Texture2D" uid="uid://bq8kd75xjxiwd" path="res://assets/sprites/laboratorioNovo.png" id="9_j4l1o"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ypq5l"]
-atlas = ExtResource("4_uwv7y")
-region = Rect2(17, 2, 13, 59)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8t2h0"]
-atlas = ExtResource("4_uwv7y")
-region = Rect2(33, 13, 10, 46)
-filter_clip = true
 
 [node name="MainControl" type="Control"]
 layout_mode = 3
@@ -68,73 +59,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_mga1v")
 
-[node name="Config" type="PanelContainer" parent="Panel/TextureRect/Main"]
-layout_direction = 2
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="Panel/TextureRect/Main/Config"]
-layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="ConfigButton" type="Button" parent="Panel/TextureRect/Main/Config/MarginContainer"]
-texture_filter = 1
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-action_mode = 0
-icon = ExtResource("3_7vyhg")
-flat = true
-expand_icon = true
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/TextureRect/Main"]
-custom_minimum_size = Vector2(300, 300)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-size_flags_stretch_ratio = 0.0
-theme_override_constants/separation = 41
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="Panel/TextureRect/Main/HBoxContainer"]
-texture_filter = 1
-clip_contents = true
-custom_minimum_size = Vector2(83.13, 0)
-layout_mode = 2
-size_flags_stretch_ratio = 0.0
-max_value = 450.0
-fill_mode = 3
-nine_patch_stretch = true
-texture_over = SubResource("AtlasTexture_ypq5l")
-texture_progress = SubResource("AtlasTexture_8t2h0")
-texture_progress_offset = Vector2(-10, -13)
-
-[node name="Heart" type="CenterContainer" parent="Panel/TextureRect/Main/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 2
-
-[node name="HeartButton" type="TextureButton" parent="Panel/TextureRect/Main/HBoxContainer/Heart"]
-texture_filter = 1
-custom_minimum_size = Vector2(400, 400)
-layout_mode = 2
-action_mode = 0
-texture_normal = ExtResource("3_tuyvf")
-texture_pressed = ExtResource("4_tbny6")
-stretch_mode = 4
-
-[node name="Dummy" type="Container" parent="Panel/TextureRect/Main/HBoxContainer"]
-custom_minimum_size = Vector2(83.13, 0)
-layout_mode = 2
-
 [node name="Stats" type="HBoxContainer" parent="Panel/TextureRect/Main"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-size_flags_vertical = 6
+size_flags_vertical = 10
 
 [node name="Blood" type="MarginContainer" parent="Panel/TextureRect/Main/Stats"]
 layout_mode = 2
@@ -168,7 +96,7 @@ horizontal_alignment = 2
 
 [node name="People" type="MarginContainer" parent="Panel/TextureRect/Main/Stats"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
 size_flags_vertical = 6
 theme_override_constants/margin_top = 10
 
@@ -196,11 +124,64 @@ theme_override_font_sizes/font_size = 32
 text = "0"
 horizontal_alignment = 2
 
+[node name="Config" type="PanelContainer" parent="Panel/TextureRect/Main/Stats"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/TextureRect/Main/Stats/Config"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="ConfigButton" type="Button" parent="Panel/TextureRect/Main/Stats/Config/MarginContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+action_mode = 0
+icon = ExtResource("3_7vyhg")
+flat = true
+expand_icon = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/TextureRect/Main"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 41
+
+[node name="TextureProgressBar" parent="Panel/TextureRect/Main/HBoxContainer" instance=ExtResource("6_qaybx")]
+layout_mode = 2
+
+[node name="Heart" type="CenterContainer" parent="Panel/TextureRect/Main/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+
+[node name="HeartButton" type="TextureButton" parent="Panel/TextureRect/Main/HBoxContainer/Heart"]
+texture_filter = 1
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+action_mode = 0
+texture_normal = ExtResource("3_tuyvf")
+texture_pressed = ExtResource("4_tbny6")
+stretch_mode = 4
+
+[node name="Dummy" type="Container" parent="Panel/TextureRect/Main/HBoxContainer"]
+custom_minimum_size = Vector2(83.13, 0)
+layout_mode = 2
+
 [node name="TextureRect" type="TextureRect" parent="Panel/TextureRect/Main"]
 texture_filter = 1
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_vertical = 2
 texture = ExtResource("9_4tr4f")
 
 [node name="Store" type="HBoxContainer" parent="Panel/TextureRect/Main/TextureRect"]
@@ -260,4 +241,5 @@ autostart = true
 
 [connection signal="pressed" from="Panel/TextureRect/Main/HBoxContainer/Heart/HeartButton" to="Panel/TextureRect/Main" method="_on_heart_button_pressed"]
 [connection signal="pressed" from="Panel/TextureRect/Main/TextureRect/Store/CenterContainer/UpgradeButton" to="Panel/TextureRect/Main" method="_on_upgrade_button_pressed"]
+[connection signal="pressed" from="Panel/TextureRect/Main/TextureRect/Store/CenterContainer2/CommunityButton" to="Panel/TextureRect/Main" method="_on_community_button_pressed"]
 [connection signal="timeout" from="Panel/TextureRect/Main/Timer" to="Panel/TextureRect/Main" method="_on_timer_timeout"]
