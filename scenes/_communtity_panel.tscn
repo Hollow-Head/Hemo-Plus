@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://ccpx8yymiai42"]
 
-[ext_resource type="Texture2D" uid="uid://dlb3nxo5k8ku0" path="res://assets/sprites/base.png" id="1_1qil4"]
+[ext_resource type="Texture2D" uid="uid://dlb3nxo5k8ku0" path="res://assets/sprites/_base.png" id="1_1qil4"]
 [ext_resource type="Texture2D" uid="uid://04iiqnvsuyio" path="res://assets/sprites/X.png" id="2_whsn5"]
-[ext_resource type="Script" path="res://scenes/CommunityPanel.gd" id="3_hh0sp"]
+[ext_resource type="Script" path="res://scenes/_CommunityPanel.gd" id="3_hh0sp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7b5ua"]
 

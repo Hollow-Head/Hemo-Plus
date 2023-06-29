@@ -1,6 +1,6 @@
 extends Node
 
-var list = [{
+var upgrade = [{
 	"name": "Sangue AB",
 	"BPC": "1.2",
 	"BPS": "0.0",
@@ -50,7 +50,7 @@ var list = [{
 	"description": "\"O tipo mais raro de sangue no mundo, por possuir fator RH nulo são doadores universais.\nExistem cerca de 50 pessoas que possuem tal sangue no mundo atualmente.\"",
 	"img": "res://assets/sprites/dourado.png",
 	}]
-var comm = [{
+var community = [{
 	"name": "Boca a Boca",
 	"BPC": "0.0",
 	"BPS": "0.5",
@@ -69,6 +69,26 @@ var comm = [{
 	"people_price": "100",
 	"description": "\"Realizar campanhas pró doação de sangue.\"\nAumenta 10.0 Sangues Por Segundo.",
 	"img": "res://assets/sprites/megafone.png",
+	}]
+var research = [{
+	"name": "Cura do HIV",
+	"BPC": "0.0",
+	"BPS": "0.5",
+	"Step": "2",
+	"blood_price": "",
+	"people_price": "1",
+	"description": "\"Um grupo de pessoas salvas por você desenvolvei a cura do HIV.\"\nAumenta 0.1 Sangues Por Segundo.",
+	"img": "res://assets/sprites/recompensa.png",
+	},
+	{
+	"name": "Salvar o Mundo",
+	"BPC": "0.0",
+	"BPS": "10.0",
+	"Step": "2",
+	"blood_price": "",
+	"people_price": "8000000000",
+	"description": "\"Você conseguiu salvar todos os seres humanos do planeta, PARABENS!!!.\"\nTE TORNA O DEUS DO NOVO MUNDO.",
+	"img": "res://assets/sprites/mundo.png",
 	}]
 
 var BPS = 0.0
