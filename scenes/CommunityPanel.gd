@@ -11,6 +11,6 @@ func _ready():
 		cmI.atualizar()
 
 func _on_exit_button_toggled(button_pressed):
-	get_parent().get_parent().get_parent().get_parent().get_parent().get_node("/root/MainControl/Panel/TextureRect/Main").visible = true
-	get_parent().get_parent().get_parent().get_parent().get_parent().queue_free()
+#	get_parent().get_parent().get_parent().get_parent().get_parent().get_node("/root/MainControl/Panel/TextureRect/Main").visible = true
+	get_parent().get_parent().get_parent().get_parent().queue_free()
 	
