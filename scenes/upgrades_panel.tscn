@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfpv6xnnelgox"]
+[gd_scene load_steps=5 format=3 uid="uid://dfpv6xnnelgox"]
 
+[ext_resource type="Texture2D" uid="uid://dlb3nxo5k8ku0" path="res://assets/sprites/base.png" id="1_3qs6u"]
 [ext_resource type="Script" path="res://scenes/upgrades_panel.gd" id="1_3xmnr"]
-[ext_resource type="Texture2D" uid="uid://bkfri32e7xgdl" path="res://assets/sprites/base-square.png" id="1_lgqu6"]
 [ext_resource type="Texture2D" uid="uid://04iiqnvsuyio" path="res://assets/sprites/X.png" id="2_i8r7j"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_whxe8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7b5ua"]
 
@@ -16,26 +14,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-texture_filter = 1
-clip_contents = true
-custom_minimum_size = Vector2(0, 981)
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -10.0
 grow_horizontal = 2
-grow_vertical = 0
-size_flags_vertical = 3
-texture = ExtResource("1_lgqu6")
-patch_margin_left = 5
-patch_margin_top = 5
-patch_margin_right = 5
-patch_margin_bottom = 5
+grow_vertical = 2
 
-[node name="UpgradesPanel" type="VBoxContainer" parent="."]
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3qs6u")
+
+[node name="UpgradesPanel" type="VBoxContainer" parent="Panel/TextureRect"]
 z_as_relative = false
 layout_mode = 1
 anchors_preset = 15
@@ -47,37 +44,44 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = -1
 
-[node name="MarginContainer" type="MarginContainer" parent="UpgradesPanel"]
-custom_minimum_size = Vector2(100, 100)
+[node name="Header" type="ColorRect" parent="Panel/TextureRect/UpgradesPanel"]
+custom_minimum_size = Vector2(720, 100)
 layout_mode = 2
-size_flags_horizontal = 8
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/TextureRect/UpgradesPanel/Header"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
 theme_override_constants/margin_right = 25
 
-[node name="ExitButton" type="Button" parent="UpgradesPanel/MarginContainer"]
+[node name="ExitButton" type="MenuButton" parent="Panel/TextureRect/UpgradesPanel/Header/MarginContainer"]
+z_index = 1
 texture_filter = 1
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_whxe8")
 icon = ExtResource("2_i8r7j")
-flat = true
 expand_icon = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="UpgradesPanel"]
-texture_filter = 1
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/TextureRect/UpgradesPanel"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_7b5ua")
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
 
-[node name="UpgradesPanel" type="VBoxContainer" parent="UpgradesPanel/ScrollContainer"]
+[node name="UpgradesPanel" type="VBoxContainer" parent="Panel/TextureRect/UpgradesPanel/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 2
 script = ExtResource("1_3xmnr")
 
-[connection signal="pressed" from="UpgradesPanel/MarginContainer/ExitButton" to="UpgradesPanel/ScrollContainer/UpgradesPanel" method="_on_exit_button_pressed"]
-[connection signal="toggled" from="UpgradesPanel/MarginContainer/ExitButton" to="UpgradesPanel/ScrollContainer/UpgradesPanel" method="_on_exit_button_toggled"]
+[connection signal="toggled" from="Panel/TextureRect/UpgradesPanel/Header/MarginContainer/ExitButton" to="Panel/TextureRect/UpgradesPanel/ScrollContainer/UpgradesPanel" method="_on_exit_button_toggled"]
