@@ -136,7 +136,7 @@ layout_mode = 2
 size_flags_horizontal = 10
 theme_override_constants/margin_right = 25
 
-[node name="ExitButton" type="Button" parent="Panel/Main/Stats/Config"]
+[node name="ConfigButton" type="Button" parent="Panel/Main/Stats/Config"]
 texture_filter = 1
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
