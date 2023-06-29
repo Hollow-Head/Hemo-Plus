@@ -7,7 +7,7 @@ var list = [{
 	"Step": "1.5",
 	"blood_price": "15",
 	"people_price": "",
-	"description": "\"STipos AB conseguem receber de todos mas doar apenas para si mesmo.\"\nAumenta 0.1 Sangues Por Segundo.",
+	"description": "\"Tipos AB conseguem receber de todos mas doar apenas para si mesmo.\"\nAumenta 0.1 Sangues Por Segundo.",
 	"img": "res://assets/sprites/AB.png",
 	},
 	{

@@ -27,16 +27,16 @@ func _on_timer_timeout():
 
 
 func _on_upgrade_button_pressed():
-	visible = false
+	#visible = false
 	var panel = upgradesPanel.instantiate()
-	get_parent().get_parent().get_parent().get_parent().add_child(panel)
+	get_parent().get_parent().get_parent().add_child(panel)
 
 
 
 func _on_community_button_pressed():
-	visible = false
+	#visible = false
 	var panel = communityPanel.instantiate()
-	get_parent().get_parent().get_parent().get_parent().add_child(panel)
+	get_parent().get_parent().get_parent().add_child(panel)
 
 
 func _on_audio_stream_player_finished():
