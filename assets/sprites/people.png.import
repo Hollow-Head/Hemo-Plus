@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nj1s5vlarelc"
-path="res://.godot/imported/bloodBarFull.png-bfbaa395e8a2202bcb012dbfde6f77ad.ctex"
+uid="uid://d2gxhgvveyo2y"
+path="res://.godot/imported/people.png-06d7343652c429fd79bda25a02ab8a50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/bloodBarFull.png"
-dest_files=["res://.godot/imported/bloodBarFull.png-bfbaa395e8a2202bcb012dbfde6f77ad.ctex"]
+source_file="res://assets/sprites/people.png"
+dest_files=["res://.godot/imported/people.png-06d7343652c429fd79bda25a02ab8a50.ctex"]
 
 [params]
 

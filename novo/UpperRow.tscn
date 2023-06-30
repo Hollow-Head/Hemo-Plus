@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dux6lxhru0xws"]
 
 [ext_resource type="Texture2D" uid="uid://ikvbvpy3syio" path="res://assets/sprites/blood.png" id="1_d3lfg"]
-[ext_resource type="Texture2D" uid="uid://d2gxhgvveyo2y" path="res://assets/sprites/bonequinho.png" id="2_d4eya"]
+[ext_resource type="Texture2D" uid="uid://d2gxhgvveyo2y" path="res://assets/sprites/people.png" id="2_d4eya"]
 [ext_resource type="Texture2D" uid="uid://clbunwhgxq38m" path="res://assets/sprites/configurações.png" id="3_srg6k"]
 
 [node name="UpperRow" type="HBoxContainer"]

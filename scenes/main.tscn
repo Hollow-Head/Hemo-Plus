@@ -1,24 +1,28 @@
-[gd_scene load_steps=19 format=3 uid="uid://c50wvnmyt01vo"]
+[gd_scene load_steps=20 format=3 uid="uid://c50wvnmyt01vo"]
 
 [ext_resource type="Texture2D" uid="uid://d1ubka0upoira" path="res://assets/sprites/telaDeFundo.png" id="1_105xq"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_mga1v"]
 [ext_resource type="Texture2D" uid="uid://clbunwhgxq38m" path="res://assets/sprites/configurações.png" id="3_7vyhg"]
 [ext_resource type="Texture2D" uid="uid://blxquhdgi1yoj" path="res://assets/sprites/heart.png" id="3_tuyvf"]
+[ext_resource type="Texture2D" uid="uid://d2gxhgvveyo2y" path="res://assets/sprites/people.png" id="4_aqmlq"]
 [ext_resource type="Texture2D" uid="uid://dkryu74dx1yq7" path="res://assets/sprites/pressedHeart.png" id="4_tbny6"]
 [ext_resource type="Texture2D" uid="uid://ikvbvpy3syio" path="res://assets/sprites/blood.png" id="5_0xpga"]
 [ext_resource type="PackedScene" uid="uid://ch7465kfeyxue" path="res://novo/bar.tscn" id="6_qaybx"]
-[ext_resource type="Texture2D" uid="uid://cvvgmcdn2bubf" path="res://assets/sprites/bloodBarAtlas.png" id="7_u7k3t"]
+[ext_resource type="Texture2D" uid="uid://c0pvw3rl8j1d2" path="res://assets/sprites/blood-bar-atlas.png" id="7_twsx4"]
 [ext_resource type="Texture2D" uid="uid://cs8pteib4vmdb" path="res://assets/sprites/upgradesNovo.png" id="7_xtmvy"]
 [ext_resource type="Texture2D" uid="uid://buxo2n2luhcvx" path="res://assets/sprites/comunidadeNovo.png" id="8_gdvr5"]
-[ext_resource type="Texture2D" uid="uid://d2gxhgvveyo2y" path="res://assets/sprites/bonequinho.png" id="8_vv16x"]
 [ext_resource type="Texture2D" uid="uid://bq8kd75xjxiwd" path="res://assets/sprites/laboratorioNovo.png" id="9_j4l1o"]
 [ext_resource type="Texture2D" uid="uid://bkfri32e7xgdl" path="res://assets/sprites/base-square.png" id="10_lnwod"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iqq7q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ypq5l"]
-atlas = ExtResource("7_u7k3t")
-region = Rect2(17, 2, 13, 59)
+atlas = ExtResource("7_twsx4")
+region = Rect2(112, 13, 86, 389)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4qvm"]
+atlas = ExtResource("7_twsx4")
+region = Rect2(20, 86, 66, 303)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c8p7t"]
 
@@ -115,7 +119,7 @@ theme_override_constants/margin_top = 10
 texture_filter = 1
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
-texture = ExtResource("8_vv16x")
+texture = ExtResource("4_aqmlq")
 expand_mode = 1
 stretch_mode = 5
 
@@ -161,11 +165,13 @@ size_flags_stretch_ratio = 0.0
 theme_override_constants/separation = 41
 
 [node name="TextureProgressBar" parent="Panel/Main/HBoxContainer" instance=ExtResource("6_qaybx")]
+custom_minimum_size = Vector2(86, 0)
 layout_mode = 2
-value = 200.0
+nine_patch_stretch = false
 texture_under = SubResource("AtlasTexture_ypq5l")
 texture_over = null
-texture_progress_offset = Vector2(0, 0)
+texture_progress = SubResource("AtlasTexture_w4qvm")
+texture_progress_offset = Vector2(7, 73)
 
 [node name="Heart" type="CenterContainer" parent="Panel/Main/HBoxContainer"]
 layout_mode = 2
@@ -182,7 +188,7 @@ texture_pressed = ExtResource("4_tbny6")
 stretch_mode = 4
 
 [node name="Dummy" type="Control" parent="Panel/Main/HBoxContainer"]
-custom_minimum_size = Vector2(83.13, 0)
+custom_minimum_size = Vector2(86, 0)
 layout_mode = 2
 
 [node name="TextureRect" type="NinePatchRect" parent="Panel/Main"]

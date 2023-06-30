@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvvgmcdn2bubf"
-path="res://.godot/imported/bloodBarAtlas.png-1ef145f521968bd3788da40bda438e68.ctex"
+uid="uid://c0pvw3rl8j1d2"
+path="res://.godot/imported/blood-bar-atlas.png-1fdb8d2033b0483cb3f102aff19bf8e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/bloodBarAtlas.png"
-dest_files=["res://.godot/imported/bloodBarAtlas.png-1ef145f521968bd3788da40bda438e68.ctex"]
+source_file="res://assets/sprites/blood-bar-atlas.png"
+dest_files=["res://.godot/imported/blood-bar-atlas.png-1fdb8d2033b0483cb3f102aff19bf8e8.ctex"]
 
 [params]
 
