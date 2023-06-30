@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c50wvnmyt01vo"]
+[gd_scene load_steps=19 format=3 uid="uid://c50wvnmyt01vo"]
 
 [ext_resource type="Texture2D" uid="uid://d1ubka0upoira" path="res://assets/sprites/telaDeFundo.png" id="1_105xq"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_mga1v"]
@@ -7,13 +7,18 @@
 [ext_resource type="Texture2D" uid="uid://dkryu74dx1yq7" path="res://assets/sprites/pressedHeart.png" id="4_tbny6"]
 [ext_resource type="Texture2D" uid="uid://ikvbvpy3syio" path="res://assets/sprites/blood.png" id="5_0xpga"]
 [ext_resource type="PackedScene" uid="uid://ch7465kfeyxue" path="res://novo/bar.tscn" id="6_qaybx"]
+[ext_resource type="Texture2D" uid="uid://cvvgmcdn2bubf" path="res://assets/sprites/bloodBarAtlas.png" id="7_u7k3t"]
 [ext_resource type="Texture2D" uid="uid://cs8pteib4vmdb" path="res://assets/sprites/upgradesNovo.png" id="7_xtmvy"]
 [ext_resource type="Texture2D" uid="uid://buxo2n2luhcvx" path="res://assets/sprites/comunidadeNovo.png" id="8_gdvr5"]
 [ext_resource type="Texture2D" uid="uid://d2gxhgvveyo2y" path="res://assets/sprites/bonequinho.png" id="8_vv16x"]
-[ext_resource type="Texture2D" uid="uid://dlb3nxo5k8ku0" path="res://assets/sprites/_base.png" id="9_4tr4f"]
 [ext_resource type="Texture2D" uid="uid://bq8kd75xjxiwd" path="res://assets/sprites/laboratorioNovo.png" id="9_j4l1o"]
+[ext_resource type="Texture2D" uid="uid://bkfri32e7xgdl" path="res://assets/sprites/base-square.png" id="10_lnwod"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iqq7q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypq5l"]
+atlas = ExtResource("7_u7k3t")
+region = Rect2(17, 2, 13, 59)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c8p7t"]
 
@@ -157,6 +162,10 @@ theme_override_constants/separation = 41
 
 [node name="TextureProgressBar" parent="Panel/Main/HBoxContainer" instance=ExtResource("6_qaybx")]
 layout_mode = 2
+value = 200.0
+texture_under = SubResource("AtlasTexture_ypq5l")
+texture_over = null
+texture_progress_offset = Vector2(0, 0)
 
 [node name="Heart" type="CenterContainer" parent="Panel/Main/HBoxContainer"]
 layout_mode = 2
@@ -176,12 +185,17 @@ stretch_mode = 4
 custom_minimum_size = Vector2(83.13, 0)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel/Main"]
+[node name="TextureRect" type="NinePatchRect" parent="Panel/Main"]
 texture_filter = 1
-custom_minimum_size = Vector2(0, 100)
+custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 size_flags_vertical = 10
-texture = ExtResource("9_4tr4f")
+texture = ExtResource("10_lnwod")
+region_rect = Rect2(0, 0, 150, 150)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
 
 [node name="Store" type="HBoxContainer" parent="Panel/Main/TextureRect"]
 custom_minimum_size = Vector2(720, 150)

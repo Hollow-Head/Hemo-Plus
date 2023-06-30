@@ -9,6 +9,12 @@ extends VBoxContainer
 func _on_heart_button_pressed():
 	Variables.blood += 1 * Upgrades.BPC
 	Variables.global_blood += 1 * Upgrades.BPC
+	bar.value += 1 * Upgrades.BPC
+	#if (Variables.global_blood != 0 && int(Variables.global_blood) % 450 == 0):
+	#	Variables.people += 1
+	#	bar.value = 0
+	#if (bar.value == 450):
+	#	bar.value = 0
 	#bloodText.text = str(Variables.blood)
 
 
@@ -16,11 +22,13 @@ func _on_heart_button_pressed():
 func _process(delta):
 	bloodText.text = str(roundf(Variables.blood))
 	peopleText.text = str(Variables.people)
-	bar.value = Variables.blood
+	if (bar.value == 450):
+		bar.value = 0
 	
 
 func _on_timer_timeout():
 	Variables.blood += Upgrades.BPS
+	bar.value += Upgrades.BPS
 	$Timer.start()
 
 
