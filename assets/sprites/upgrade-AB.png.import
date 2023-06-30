@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlb3nxo5k8ku0"
-path="res://.godot/imported/_base.png-c2bfd55fc799e247537a8eb14cc315f2.ctex"
+uid="uid://b6j72iwukonmt"
+path="res://.godot/imported/upgrade-AB.png-bb9d17d42f968dce07eec3543df50bc8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/_base.png"
-dest_files=["res://.godot/imported/_base.png-c2bfd55fc799e247537a8eb14cc315f2.ctex"]
+source_file="res://assets/sprites/upgrade-AB.png"
+dest_files=["res://.godot/imported/upgrade-AB.png-bb9d17d42f968dce07eec3543df50bc8.ctex"]
 
 [params]
 

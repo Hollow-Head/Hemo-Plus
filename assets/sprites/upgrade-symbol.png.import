@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvvgmcdn2bubf"
-path="res://.godot/imported/_bloodBarAtlas.png-40899b748a36b69a44089aa1c327ef0e.ctex"
+uid="uid://b7hodyukirdjv"
+path="res://.godot/imported/upgrade-symbol.png-3f48f8608adfdce4bc8778cef7d219bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/_bloodBarAtlas.png"
-dest_files=["res://.godot/imported/_bloodBarAtlas.png-40899b748a36b69a44089aa1c327ef0e.ctex"]
+source_file="res://assets/sprites/upgrade-symbol.png"
+dest_files=["res://.godot/imported/upgrade-symbol.png-3f48f8608adfdce4bc8778cef7d219bf.ctex"]
 
 [params]
 
