@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://berv33hmbqdik"]
 
-[ext_resource type="Texture2D" uid="uid://nj1s5vlarelc" path="res://assets/sprites/bloodBarFull.png" id="1_5r5j6"]
-[ext_resource type="Texture2D" uid="uid://boea7h5ck0uho" path="res://BloodThirst/bloodBarBackground.png" id="2_tmulm"]
+[ext_resource type="Texture2D" path="res://assets/sprites/bloodBarFull.png" id="1_5r5j6"]
+[ext_resource type="Texture2D" path="res://BloodThirst/bloodBarBackground.png" id="2_tmulm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0pvsb"]
 atlas = ExtResource("1_5r5j6")
