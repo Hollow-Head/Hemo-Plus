@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgffik2qder81"
-path="res://.godot/imported/bloodBarEmpty.png-b46bd6f88fb5301b0ff7abe1fb9229c7.ctex"
+uid="uid://cyg8leamf4svh"
+path="res://.godot/imported/ideiaDoHud.png-72393fb8788c74dab60645e602dbf440.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/bloodBarEmpty.png"
-dest_files=["res://.godot/imported/bloodBarEmpty.png-b46bd6f88fb5301b0ff7abe1fb9229c7.ctex"]
+source_file="res://assets/sprites/old/ideiaDoHud.png"
+dest_files=["res://.godot/imported/ideiaDoHud.png-72393fb8788c74dab60645e602dbf440.ctex"]
 
 [params]
 

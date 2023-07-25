@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boo71bm74ikl6"
-path="res://.godot/imported/seringa.png-f0c149285a3e3545229d7b7f01b0adc2.ctex"
+uid="uid://b6j72iwukonmt"
+path="res://.godot/imported/upgrade-AB.png-bb9d17d42f968dce07eec3543df50bc8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/seringa.png"
-dest_files=["res://.godot/imported/seringa.png-f0c149285a3e3545229d7b7f01b0adc2.ctex"]
+source_file="res://assets/sprites/upgrade-AB.png"
+dest_files=["res://.godot/imported/upgrade-AB.png-bb9d17d42f968dce07eec3543df50bc8.ctex"]
 
 [params]
 

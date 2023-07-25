@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdhyppoogt418"
-path="res://.godot/imported/base.png-bc3c071fe70354c1c09d3b1e33059006.ctex"
+uid="uid://cnvx3iwvunhqv"
+path="res://.godot/imported/icon-people.png-f882a8a2c7e638f1275c88a276a63526.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/base.png"
-dest_files=["res://.godot/imported/base.png-bc3c071fe70354c1c09d3b1e33059006.ctex"]
+source_file="res://assets/sprites/icon-people.png"
+dest_files=["res://.godot/imported/icon-people.png-f882a8a2c7e638f1275c88a276a63526.ctex"]
 
 [params]
 

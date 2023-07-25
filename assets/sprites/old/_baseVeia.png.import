@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdhyppoogt418"
-path="res://.godot/imported/base.png-bc3c071fe70354c1c09d3b1e33059006.ctex"
+uid="uid://c6jshp14vmdgy"
+path="res://.godot/imported/_baseVeia.png-9b91a0d03a86de2b264106d5ee0cc972.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/base.png"
-dest_files=["res://.godot/imported/base.png-bc3c071fe70354c1c09d3b1e33059006.ctex"]
+source_file="res://assets/sprites/old/_baseVeia.png"
+dest_files=["res://.godot/imported/_baseVeia.png-9b91a0d03a86de2b264106d5ee0cc972.ctex"]
 
 [params]
 

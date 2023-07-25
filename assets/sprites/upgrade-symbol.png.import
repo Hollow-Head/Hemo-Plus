@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boea7h5ck0uho"
-path="res://.godot/imported/bloodBarBackground.png-6dfe61f85f85dd61f630a4e61889cd2e.ctex"
+uid="uid://b7hodyukirdjv"
+path="res://.godot/imported/upgrade-symbol.png-3f48f8608adfdce4bc8778cef7d219bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BloodThirst/bloodBarBackground.png"
-dest_files=["res://.godot/imported/bloodBarBackground.png-6dfe61f85f85dd61f630a4e61889cd2e.ctex"]
+source_file="res://assets/sprites/upgrade-symbol.png"
+dest_files=["res://.godot/imported/upgrade-symbol.png-3f48f8608adfdce4bc8778cef7d219bf.ctex"]
 
 [params]
 

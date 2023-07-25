@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdhyppoogt418"
-path="res://.godot/imported/base.png-bc3c071fe70354c1c09d3b1e33059006.ctex"
+uid="uid://boo71bm74ikl6"
+path="res://.godot/imported/upgrade-syringe.png-33752fd0db36398a24b2c8518dfb4d92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/base.png"
-dest_files=["res://.godot/imported/base.png-bc3c071fe70354c1c09d3b1e33059006.ctex"]
+source_file="res://assets/sprites/upgrade-syringe.png"
+dest_files=["res://.godot/imported/upgrade-syringe.png-33752fd0db36398a24b2c8518dfb4d92.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6jshp14vmdgy"
-path="res://.godot/imported/baseVeia.png-557125ed85bbf97d858f69c5cd7ed2dc.ctex"
+uid="uid://oeydw35p2b5p"
+path="res://.godot/imported/upgrade-O.png-301575846de2e769ab5b280f45b13518.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/baseVeia.png"
-dest_files=["res://.godot/imported/baseVeia.png-557125ed85bbf97d858f69c5cd7ed2dc.ctex"]
+source_file="res://assets/sprites/upgrade-O.png"
+dest_files=["res://.godot/imported/upgrade-O.png-301575846de2e769ab5b280f45b13518.ctex"]
 
 [params]
 

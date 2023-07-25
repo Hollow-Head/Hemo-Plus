@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvvgmcdn2bubf"
-path="res://.godot/imported/bloodBarAtlas.png-1ef145f521968bd3788da40bda438e68.ctex"
+uid="uid://brtleywa5hk4e"
+path="res://.godot/imported/circuloQuadradoPixelArt.png-4f909b3753da837b7913ada994fc3053.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/bloodBarAtlas.png"
-dest_files=["res://.godot/imported/bloodBarAtlas.png-1ef145f521968bd3788da40bda438e68.ctex"]
+source_file="res://assets/sprites/old/circuloQuadradoPixelArt.png"
+dest_files=["res://.godot/imported/circuloQuadradoPixelArt.png-4f909b3753da837b7913ada994fc3053.ctex"]
 
 [params]
 

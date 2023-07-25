@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cafovsisisged" path="res://icon.svg" id="1_raii7"]
 [ext_resource type="Texture2D" uid="uid://ikvbvpy3syio" path="res://assets/sprites/blood.png" id="3_0hb74"]
 [ext_resource type="Texture2D" uid="uid://ca8plai56mqio" path="res://assets/sprites/compraEPreco.png" id="3_qb8fy"]
-[ext_resource type="Texture2D" uid="uid://d2gxhgvveyo2y" path="res://assets/sprites/bonequinho.png" id="5_0ofr1"]
+[ext_resource type="Texture2D" uid="uid://d2gxhgvveyo2y" path="res://assets/sprites/people.png" id="5_0ofr1"]
 
 [node name="UpgradeItem" type="VBoxContainer"]
 custom_minimum_size = Vector2(720, 180)

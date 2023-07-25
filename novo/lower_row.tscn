@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6fot2kptc7qp"]
+
+[ext_resource type="Texture2D" uid="uid://cs8pteib4vmdb" path="res://assets/sprites/upgradesNovo.png" id="1_iroxa"]
+[ext_resource type="Texture2D" uid="uid://buxo2n2luhcvx" path="res://assets/sprites/comunidadeNovo.png" id="2_51u4l"]
+[ext_resource type="Texture2D" uid="uid://bq8kd75xjxiwd" path="res://assets/sprites/laboratorioNovo.png" id="3_3qchg"]
+
+[node name="LowerRow" type="HBoxContainer"]
+custom_minimum_size = Vector2(720, 0)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Upgrades" type="Button" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 6
+icon = ExtResource("1_iroxa")
+flat = true
+expand_icon = true
+
+[node name="Community" type="Button" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 6
+icon = ExtResource("2_51u4l")
+flat = true
+expand_icon = true
+
+[node name="Research" type="Button" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 6
+icon = ExtResource("3_3qchg")
+flat = true
+expand_icon = true

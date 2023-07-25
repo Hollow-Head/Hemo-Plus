@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://m88wsda48mmo"
-path="res://.godot/imported/SANGUE.png-15a9b1cc138587ad64ddc56cfd998f2f.ctex"
+uid="uid://cdpp06cd3anqg"
+path="res://.godot/imported/upgrade-B.png-cca3df36391efd2ccc0ae587029e284b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/SANGUE.png"
-dest_files=["res://.godot/imported/SANGUE.png-15a9b1cc138587ad64ddc56cfd998f2f.ctex"]
+source_file="res://assets/sprites/upgrade-B.png"
+dest_files=["res://.godot/imported/upgrade-B.png-cca3df36391efd2ccc0ae587029e284b.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2gxhgvveyo2y"
-path="res://.godot/imported/bonequinho.png-a7ee717a25c891bdefc0177c70ce6aa2.ctex"
+uid="uid://cbir2imnpw6rl"
+path="res://.godot/imported/button-buy.png-72ae30db1330a619d99610895fe86d56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/bonequinho.png"
-dest_files=["res://.godot/imported/bonequinho.png-a7ee717a25c891bdefc0177c70ce6aa2.ctex"]
+source_file="res://assets/sprites/button-buy.png"
+dest_files=["res://.godot/imported/button-buy.png-72ae30db1330a619d99610895fe86d56.ctex"]
 
 [params]
 

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch7465kfeyxue"]
+
+[ext_resource type="Texture2D" uid="uid://cvvgmcdn2bubf" path="res://assets/sprites/_bloodBarAtlas.png" id="1_d8138"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypq5l"]
+atlas = ExtResource("1_d8138")
+region = Rect2(17, 2, 13, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t2h0"]
+atlas = ExtResource("1_d8138")
+region = Rect2(33, 13, 10, 46)
+filter_clip = true
+
+[node name="TextureProgressBar" type="TextureProgressBar"]
+texture_filter = 1
+clip_contents = true
+custom_minimum_size = Vector2(83.13, 0)
+size_flags_stretch_ratio = 0.0
+max_value = 450.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_over = SubResource("AtlasTexture_ypq5l")
+texture_progress = SubResource("AtlasTexture_8t2h0")
+texture_progress_offset = Vector2(-10, -13)
